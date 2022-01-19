@@ -14,25 +14,6 @@ const Topbar: FC = () => {
 
   return (
     <div className='d-flex align-items-stretch flex-shrink-0'>
-      {/* Search */}
-      <div className={clsx('d-flex align-items-stretch', toolbarButtonMarginClass)}>
-        <Search />
-      </div>
-      {/* Activities */}
-      <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
-        {/* begin::Drawer toggle */}
-        <div
-          className={clsx('btn btn-icon btn-active-light-primary btn-custom', toolbarButtonHeightClass)}
-          id='kt_activities_toggle'
-        >
-          <KTSVG
-            path='/media/icons/duotune/general/gen032.svg'
-            className={toolbarButtonIconSizeClass}
-          />
-        </div>
-        {/* end::Drawer toggle */}
-      </div>
-      {/* Quick links */}
       <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
         {/* begin::Menu wrapper */}
         <div
@@ -51,48 +32,6 @@ const Topbar: FC = () => {
         {/* end::Menu wrapper */}
       </div>
 
-      {/* CHAT */}
-      <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
-        {/* begin::Menu wrapper */}
-        <div
-          className={clsx(
-            'btn btn-icon btn-active-light-primary btn-custom',
-            toolbarButtonHeightClass
-          )}
-          id='kt_drawer_chat_toggle'
-        >
-          <KTSVG
-            path='/media/icons/duotune/communication/com012.svg'
-            className={toolbarButtonIconSizeClass}
-          />
-
-          <span className='bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink'></span>
-        </div>
-        {/* end::Menu wrapper */}
-      </div>
-
-      {/* NOTIFICATIONS */}
-      <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
-        {/* begin::Menu- wrapper */}
-        <div
-          className={clsx(
-            'btn btn-icon btn-active-light-primary btn-custom',
-            toolbarButtonHeightClass
-          )}
-          data-kt-menu-trigger='click'
-          data-kt-menu-attach='parent'
-          data-kt-menu-placement='bottom-end'
-          data-kt-menu-flip='bottom'
-        >
-          <KTSVG
-            path='/media/icons/duotune/general/gen022.svg'
-            className={toolbarButtonIconSizeClass}
-          />
-        </div>
-        <HeaderNotificationsMenu />
-        {/* end::Menu wrapper */}
-      </div>
-
       {/* begin::User */}
       <div
         className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}
@@ -100,13 +39,19 @@ const Topbar: FC = () => {
       >
         {/* begin::Toggle */}
         <div
-          className={clsx('cursor-pointer symbol', toolbarUserAvatarHeightClass)}
+          className={clsx('cursor-pointer symbol btn btn-flex align-items-center', toolbarUserAvatarHeightClass)}
           data-kt-menu-trigger='click'
           data-kt-menu-attach='parent'
           data-kt-menu-placement='bottom-end'
           data-kt-menu-flip='bottom'
         >
-          <img src={toAbsoluteUrl('/media/avatars/150-26.jpg')} alt='metronic' />
+          <div className="d-none d-md-flex flex-column align-items-end justify-content-center me-2 me-md-4">
+						<span className="text-white opacity-75 fs-8 fw-bold lh-1 mb-1">Max</span>
+						<span className="text-white fs-8 fw-bolder lh-1">UX Designer</span>
+					</div>
+          <div className="symbol symbol-30px symbol-md-40px">
+            <img src={toAbsoluteUrl('/media/avatars/150-26.jpg')} alt='metronic' />
+          </div>
         </div>
         <HeaderUserMenu />
         {/* end::Toggle */}

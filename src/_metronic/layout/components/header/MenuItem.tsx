@@ -24,9 +24,9 @@ const MenuItem: React.FC<Props> = ({
   const {pathname} = useLocation()
 
   return (
-    <div className='menu-item me-lg-1'>
+    <div className='menu-item mr-2'>
       <Link
-        className={clsx('menu-link py-3', {
+        className={clsx('menu-link p-0', {
           active: checkIsActive(pathname, to),
         })}
         to={to}

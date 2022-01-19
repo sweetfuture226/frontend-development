@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url("../../../app/modules/admin/assets/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: local("Avenir Next"), url("../../../app/modules/admin/assets/AvenirNextLTPro-Regular.otf") format("truetype");
+}
+
+body {
+  background-color: #f3f6f9 !important;
+}
+
+.conected-oveview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 4.9rem !important;
+  .box-container {
+    width: 45%;
+  }
+}
+.box-left-custom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: max-content;
+  gap: 9px 5px;
+  .box-customers {
+    width: 49%;
+    height: 135px;
+    padding: 17px 25px;
+    h2,
+    p {
+      margin: 0;
+      font-family: "Avenir Next";
+      font-style: normal;
+    }
+    h2 {
+      margin-top: 15px;
+      color: #464e5f;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px;
+      color: #b5b5c3;
+    }
+  }
+}
+.text-muted {
+  color: #b5b5c3 !important;
+}
+.notes {
+  .notes__contain {
+    padding: 20px 2.25rem;
+    padding-bottom: 260px;
+    h2 {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 25px;
+      color: #7e8299;
+    }
+    .agent {
+      margin-top: 42px;
+      justify-content: space-between;
+      .box-agnet {
+        border-bottom: 1px dashed #e4e6ef;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        width: 49% !important;
+        h3 {
+          font-family: "Avenir Next";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 22px;
+          color: #13263c;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          img {
+            margin-right: 10px;
+          }
+        }
+        p {
+          font-family: "Avenir Next";
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 23px;
+          color: #7e8299;
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}
+.title-video {
+  font-family: "Avenir Next";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #464e5f;
+}
+.moda-agent {
+  .ant-modal-title {
+    font-size: 24px;
+  }
+  input[type="text"],
+  textarea {
+    background: #ffffff;
+    opacity: 0.5;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .ant-modal-header,
+  .ant-modal-footer {
+    border: none;
+  }
+  .ant-modal-header {
+    padding-top: 30px;
+  }
+  .ant-modal-footer {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .ant-modal-content {
+    .ant-modal-close {
+      display: none;
+    }
+    p {
+      margin: 0;
+      font-family: "Avenir Next";
+      font-size: 14px;
+    }
+  }
+  .input-name {
+    margin-bottom: 20px;
+  }
+  .ant-btn {
+    border-radius: 5px;
+  }
+}

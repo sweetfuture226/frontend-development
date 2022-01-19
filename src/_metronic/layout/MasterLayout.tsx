@@ -1,12 +1,12 @@
-import React, {useEffect} from 'react'
-import {AsideDefault} from './components/aside/AsideDefault'
-import {Footer} from './components/Footer'
-import {HeaderWrapper} from './components/header/HeaderWrapper'
-import {Toolbar} from './components/toolbar/Toolbar'
-import {ScrollTop} from './components/ScrollTop'
-import {Content} from './components/Content'
-import {PageDataProvider} from './core'
-import {useLocation} from 'react-router-dom'
+import React, { useEffect } from "react";
+import { AsideDefault } from "./components/aside/AsideDefault";
+import { Footer } from "./components/Footer";
+import { HeaderWrapper } from "./components/header/HeaderWrapper";
+import { Toolbar } from "./components/toolbar/Toolbar";
+import { ScrollTop } from "./components/ScrollTop";
+import { Content } from "./components/Content";
+import { PageDataProvider } from "./core";
+import { useLocation } from "react-router-dom";
 import {
   DrawerMessenger,
   ExploreMain,
@@ -14,33 +14,33 @@ import {
   Main,
   InviteUsers,
   UpgradePlan,
-} from '../partials'
-import {MenuComponent} from '../assets/ts/components'
+} from "../partials";
+import { MenuComponent } from "../assets/ts/components";
 
-const MasterLayout: React.FC = ({children}) => {
-  const location = useLocation()
+const MasterLayout: React.FC = ({ children }) => {
+  const location = useLocation();
   useEffect(() => {
     setTimeout(() => {
-      MenuComponent.reinitialization()
-    }, 500)
-  }, [])
+      MenuComponent.reinitialization();
+    }, 500);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
-      MenuComponent.reinitialization()
-    }, 500)
-  }, [location.key])
+      MenuComponent.reinitialization();
+    }, 500);
+  }, [location.key]);
 
   return (
     <PageDataProvider>
       <div className='page d-flex flex-row flex-column-fluid'>
-        <AsideDefault />
+        {/* <AsideDefault /> */}
         <div className='wrapper d-flex flex-column flex-row-fluid' id='kt_wrapper'>
           <HeaderWrapper />
-
+          {/* <HeaderNav/> */}
           <div id='kt_content' className='content d-flex flex-column flex-column-fluid'>
             <Toolbar />
-            <div className='post d-flex flex-column-fluid' id='kt_post'>
+            <div className="post d-flex flex-column-fluid" id="kt_post">
               <Content>{children}</Content>
             </div>
           </div>
@@ -61,7 +61,7 @@ const MasterLayout: React.FC = ({children}) => {
       {/* end:: Modals */}
       <ScrollTop />
     </PageDataProvider>
-  )
-}
+  );
+};
 
-export {MasterLayout}
+export { MasterLayout };

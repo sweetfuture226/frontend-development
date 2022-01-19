@@ -199,8 +199,8 @@ export class LayoutSetup {
     }
 
     // Enable Aside
-    document.body.classList.add('aside-enabled')
-    LayoutSetup.classes.aside.push(`aside-${config.theme}`)
+    // document.body.classList.add('aside-enabled')
+    // LayoutSetup.classes.aside.push(`aside-${config.theme}`)
 
     // Fixed Aside
     if (config.fixed) {
